@@ -3,7 +3,8 @@ body {
   font-family: "BIZ UDGothic", sans-serif;
   font-family: "Macondo", cursive;
 
-  background-image: url(../imagenes/landscape.jpg);
+  background-image: url("https://i.imgur.com/vuB8j1e.jpg");
+  background-size: cover;
 }
 
 .bienvenida {
