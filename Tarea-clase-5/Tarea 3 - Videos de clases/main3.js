@@ -1,100 +1,50 @@
+document.querySelector("#calcular-tiempo-total").onclick = function () {
+  let horas = 0;
+  let minutos = 0;
+  let segundos = 0;
+  let segundosTotales = 0;
 
-const Horas = 0
+  const $horas = document.querySelectorAll("#horas");
 
-document.querySelector('#ingresar').onclick=function(){
+  for (let i = 0; i < $horas.length; i++) {
+    horas += Number($horas[i].value);
+  }
 
-    const Horas = document.querySelectorAll('li');
-    //const Minutos = document.querySelectorAll('.listaMinutos').value;
-    //const Segundos = document.querySelectorAll('.listSsegundos').value;
+  const $minutos = document.querySelectorAll("#minutos");
 
-         
-    
-}
+  for (let i = 0; i < $minutos.length; i++) {
+    minutos += Number($minutos[i].value);
+  }
 
-/*function sumaDelTiempoTotal(Horas, Minutos, Segundos,){
+  const $segundos = document.querySelectorAll("#segundos");
 
-    return Horas+Minutos+Segundos;
+  for (let i = 0; i < $segundos.length; i++) {
+    segundos += Number($segundos[i].value);
+  }
 
-}
+  function calcularSegundosTotales(horas, minutos, segundos) {
+    return (segundosTotales = horas * 3600 + minutos * 60 + segundos);
+  }
 
+  function calcularHorasDesdeSegundos(segundosTotales) {
+    return Math.trunc((horasDesdeSegundos = segundosTotales / 3600));
+  }
 
-document.querySelector('#calcular-tiempo-total').onclick=function(){
+  function calcularMinutosDesdeSegundos(segundosTotales) {
+    return Math.trunc((segundosTotales / 60) % 60);
+  }
 
-    
-    console.log(`la suma del tiempo total de clases es ${sumaDelTiempoTotal}`);
+  function calcularSegundosFinales(segundosTotales) {
+    return Math.trunc(segundosTotales % 120);
+  }
 
-}
+  const $textoDuracionClases = document.querySelector(".textoDuracionClases");
 
+  $textoDuracionClases.innerText = `La duracion es: ${calcularHorasDesdeSegundos(
+    calcularSegundosTotales(horas, minutos, segundos)
+  )}:${calcularMinutosDesdeSegundos(segundosTotales)}:${calcularSegundosFinales(
+    segundosTotales
+  )}`;
 
-*/
-
-
-
-
-
-
-
-
-/*document.querySelector('#ingresar').onclick=function(){
-
-    const Horas = Number (document.querySelector('#horas').value);
-    const Minutos = Number (document.querySelector('#minutos').value);
-    const Segundos = Number (document.querySelector('#segundos').value);
-
-    let HorasTotal = [0];
-    let MinutosTotal = [];
-    let SegundosTotal = [];
-
-    let sumaHorasTotales = [];
-
-    let tiempoTotal = [];
-
-    HorasTotal.push (Horas);
-
-   
-    for (let m=0; m<HorasTotal.length; m++){
-
-        sumaHorasTotales= sumaHorasTotales + HorasTotal[m];
-
-    }
-
-    function sumaDelTiempoTotal(sumaHorasTotales, tiempoTotal){
-
-        return tiempoTotal = sumaHorasTotales;
-
-    }
-
-    document.querySelector('#calcular-tiempo-total').onclick=function(){
-
-        
-        console.log(`la suma del tiempo total de clases es ${sumaDelTiempoTotal}`);
-
-    }
-
-}*/
-
-
-
-/*let numerosImpares=[];
-let totalSumaNumerosImpares=0;
-
-
-for (let i= 10; i<30; i++){
-
-    resultado=i;
-    
-    if (resultado%2==!0){
-
-        numerosImpares.push (resultado);
-    }
-
-}
-
-for (let m=0; m<numerosImpares.length; m++){
-
-    totalSumaNumerosImpares= totalSumaNumerosImpares + numerosImpares[m];
-
-    
-}
-
-console.log(totalSumaNumerosImpares);*/
+  return false;
+};
