@@ -8,6 +8,9 @@ body {
   font-family: "Rubik", sans-serif;
   font-family: "BIZ UDGothic", sans-serif;
   font-family: "Courier Prime", monospace;
+
+  background-image: url("https://i.imgur.com/uhTQ57T.jpg");
+  background-size: cover;
 }
 
 /*Estilos del Header*/
@@ -22,12 +25,12 @@ header {
   justify-content: center;
   width: 80%;
   background-color: rgba(239, 155, 125, 0.595);
-  margin: 40px 20px 20px 20px;
+  margin: 40px 20px 10px 20px;
   padding: 20px;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bolder;
 }
 
@@ -37,12 +40,12 @@ h1 {
   display: flexbox;
   justify-content: center;
   width: 80%;
-  margin: 40px;
+  margin: 20px;
   padding: 10px;
 }
 
 .divFormulario {
-  margin: 40;
+  margin: 30;
   padding: 10px;
 
   justify-content: center;
@@ -57,12 +60,23 @@ form {
   align-content: space-around;
 }
 
-ol {
+input {
+  background-color: rgb(241, 187, 168);
+}
+
+#calcular-tiempo-total {
+  margin: 20px;
+  font-size: medium;
+  background-color: rgb(240, 164, 136);
 }
 
 .divDuracionTotal {
-  margin: 40;
+  margin: 30px;
   padding: 10px;
 
   background-color: rgba(239, 155, 125, 0.595);
+}
+
+.textoDuracionClases {
+  font-size: 30px;
 }
